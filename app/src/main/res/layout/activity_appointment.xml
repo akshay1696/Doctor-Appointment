@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AppointmentActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@color/colorPrimaryDark">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                android:tint="@color/white"
+                android:padding="10sp"
+                android:layout_alignParentLeft="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@+id/back"
+                android:gravity="center"
+                android:padding="10sp"
+                android:text="@string/dctrdetails"/>
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+      <androidx.cardview.widget.CardView
+          app:cardUseCompatPadding="true"
+          app:cardElevation="5dp"
+          app:cardCornerRadius="10dp"
+          android:layout_width="match_parent"
+          android:layout_height="220dp"
+          android:layout_marginTop="-100dp">
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginBottom="3dp"
+              android:orientation="vertical">
+
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+              <ImageView
+                  android:id="@+id/img_userprofileimage"
+                  android:layout_width="80dp"
+                  android:layout_height="80dp"
+                  android:layout_marginLeft="15dp"
+                  android:layout_marginTop="10dp"
+                  android:layout_alignParentLeft="true"
+                  android:scaleType="fitXY"
+                  android:src="@drawable/doctor1" />
+
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_toRightOf="@+id/img_userprofileimage"
+                  android:layout_marginLeft="15dp"
+                  android:orientation="vertical">
+
+                  <TextView
+                      android:id="@+id/doctorname"
+                      android:textSize="16sp"
+                      android:text="Dr. K.J Reddy"
+                      android:textStyle="bold"
+                      android:layout_width="wrap_content"
+                      android:layout_marginTop="20dp"
+                      android:layout_alignParentTop="true"
+                      android:textColor="@color/colorPrimaryDark"
+                      android:layout_height="wrap_content"
+                      android:singleLine="true" />
+
+                  <TextView
+                      android:id="@+id/specelist"
+                      android:textSize="14sp"
+                      android:text="@string/dctr1"
+                      android:textStyle="italic"
+                      android:layout_width="wrap_content"
+                      android:layout_marginTop="5dp"
+                      android:textColor="@color/textclor"
+                      android:layout_height="wrap_content"/>
+
+              </LinearLayout>
+              </RelativeLayout>
+              <RelativeLayout
+                  android:layout_below="@+id/img_userprofileimage"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp">
+                  <View
+                      android:layout_width="match_parent"
+                      android:layout_height="0.3dp"
+                      android:background="@color/textclor"/>
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentLeft="true"
+                      android:text="34 Years\n Experience"
+                      android:padding="10dp"/>
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerInParent="true"
+                      android:text="Rs 1200 \n Consultation Fees"
+                      android:padding="10dp"/>
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentRight="true"
+                      android:text="986\n Petients"
+                      android:padding="10dp"/>
+
+              </RelativeLayout>
+              <View
+                  android:layout_width="match_parent"
+                  android:layout_height="0.3dp"
+                  android:background="@color/textclor"/>
+              <RelativeLayout
+                  android:id="@+id/timings"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="bottom"
+                  android:layout_marginTop="8dp">
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="10dp"
+                      android:textColor="@color/colorAccent"
+                      android:textSize="16sp"
+                      android:layout_alignParentLeft="true"
+                      android:layout_centerInParent="true"
+                      android:text="All Timings"/>
+                  <ImageView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginRight="10dp"
+                      android:layout_alignParentRight="true"
+                      android:layout_centerInParent="true"
+                     android:src="@drawable/ic_arrow_right"/>
+
+          </RelativeLayout>
+
+          </LinearLayout>
+
+      </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/dayslots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/textslot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/textclor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:text="Select a Time Slot"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textslot"
+                android:background="#F2F1EF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/availbledate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:layout_margin="8dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/backgrounddate">
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Today,04 May"/>
+                        <TextView
+                            android:layout_below="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#4CAF50"
+                            android:gravity="center"
+                            android:text="10 Slots Available "/>
+
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:layout_margin="8dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/backgrounddate">
+                        <TextView
+                            android:id="@+id/date1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Wed,06 May"/>
+                        <TextView
+                            android:layout_below="@+id/date1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#4CAF50"
+                            android:gravity="center"
+                            android:text="12 Slots Available "/>
+
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:layout_margin="8dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/backgrounddate">
+                        <TextView
+                            android:id="@+id/date2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Fri,08 May"/>
+                        <TextView
+                            android:layout_below="@+id/date2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#4CAF50"
+                            android:gravity="center"
+                            android:text="14 Slots Available "/>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:layout_margin="8dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/backgrounddate">
+                        <TextView
+                            android:id="@+id/date3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Mon,11 May"/>
+                        <TextView
+                            android:layout_below="@+id/date3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#4CAF50"
+                            android:gravity="center"
+                            android:text="14 Slots Available "/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/mngslot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/mrngslot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/textclor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_alignParentLeft="true"
+            android:text="Morning"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mrngslot"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/txttime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/backgroundslot">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text="10:30 AM"/>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/backgroundslot">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text="11:15 AM"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/backgroundslot">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text="11:40 aM"/>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/evngslt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/evngslot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/textclor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:text="Evening"/>
+            <LinearLayout
+                android:id="@+id/slotsevn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/evngslot"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/backgroundslot">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text="1:30 PM"/>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/backgroundslot">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text="02:15 PM"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/backgroundslot">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text="02:30 PM"/>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/slotsevn"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/backgroundslot">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text="03:30 PM"/>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/backgroundslot">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text="04:15 PM"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/backgroundslot">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text="05:30 PM"/>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
